@@ -5,7 +5,10 @@
 // Siga os comentários para implementar cada parte do desafio.
 
 int main() {
+    //Vetor de coluna
     char coluna [10] = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'};
+
+    //Matriz do tabuleiro
     int tabuleiro [10][10] = {
         {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
         {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
@@ -20,15 +23,19 @@ int main() {
 
     };
 
+    //Organização de aparência
     printf("   ");
 
+    //Loop do vetor
     for (int c = 0; c < 10; c++)
     {
         printf("%c ", coluna[c]);
     }
 
+    //Organização de aparência
     printf("\n");
     
+    //Loop do tabuleiro
     for (int i = 0, k = 1; i < 10, k <= 10; i++, k++)
     {
         if (k == 10)
