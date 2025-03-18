@@ -9,19 +9,7 @@ int main() {
     char coluna [10] = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'};
 
     //Matriz do tabuleiro
-    int tabuleiro [10][10] = {
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 3, 3, 3, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 3, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 3, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 3, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
-
-    };
+    int tabuleiro [10][10];
 
     //Organização de aparência
     printf("   ");
@@ -38,6 +26,7 @@ int main() {
     //Loop do tabuleiro
     for (int i = 0, k = 1; i < 10, k <= 10; i++, k++)
     {
+        //Números indicaros de linha
         if (k == 10)
         {
             printf("%d ", k);
@@ -46,7 +35,15 @@ int main() {
         }
         for (int j = 0; j < 10; j++)
         {
-            printf("%d ", tabuleiro[i][j]);
+            //Coordenadas dos barcos
+            if (i == 2 && j == 3 || i == 2 && j == 4 || i == 2 && j == 5)
+            {
+                printf("3 ");
+            } else if (i == 5 && j == 8 || i == 6 && j == 8 || i == 7 && j == 8){
+                printf("3 ");
+            } else {
+                printf("0 ");
+            }
         }
         printf("\n");
     }
