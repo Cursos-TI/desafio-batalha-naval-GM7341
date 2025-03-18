@@ -5,6 +5,8 @@
 // Siga os comentários para implementar cada parte do desafio.
 
 int main() {
+    //Variável soma
+    int soma = 0;
     //Vetor de coluna
     char coluna [10] = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'};
 
@@ -35,11 +37,13 @@ int main() {
         }
         for (int j = 0; j < 10; j++)
         {
+            soma++;
             //Coordenadas dos barcos
-            if (i == 2 && j == 3 || i == 2 && j == 4 || i == 2 && j == 5)
+            if (soma == 24 || soma == 25 || soma == 26)
             {
                 printf("3 ");
-            } else if (i == 5 && j == 8 || i == 6 && j == 8 || i == 7 && j == 8){
+            } else if (soma == 58 || soma == 68 || soma == 78)
+            {
                 printf("3 ");
             } else {
                 printf("0 ");
